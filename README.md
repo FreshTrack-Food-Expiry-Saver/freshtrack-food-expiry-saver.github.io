@@ -11,6 +11,23 @@ for, plus a page that explains what the app does.
 | `/` | Landing page: what the app does, how the loop works, the privacy summary |
 | `/privacy-policy/` | Privacy policy — this is the URL for Play Console and AdMob |
 | `/terms/` | Terms of service |
+| `/app-ads.txt` | AdMob's authorised-sellers file — see below |
+
+## app-ads.txt
+
+`app-ads.txt` names the AdMob account allowed to sell FreshTrack's ad space.
+Google's crawler only ever looks for it at the **root of the domain** given as
+the developer website on the Play listing — `https://<domain>/app-ads.txt`.
+
+That has one consequence worth knowing before hosting: a GitHub Pages
+*project* site is served from `https://<user>.github.io/fresh-track/`, and a
+file at `/fresh-track/app-ads.txt` will never be found. To make it count,
+host this either on a custom domain or in a `<user>.github.io` repository, and
+set that same domain as the website on the Play listing.
+
+Without it ads still serve; the app is simply left out of the inventory that
+buyers restrict to verified publishers, which costs revenue rather than
+breaking anything.
 
 ## How it is built
 

@@ -1,0 +1,12 @@
+# FreshTrack — authorised digital sellers for apps (IAB app-ads.txt)
+#
+# This file tells ad buyers which accounts may sell FreshTrack's ad space.
+# Google looks for it at the ROOT of the developer website listed on the
+# Play store listing, i.e. https://<domain>/app-ads.txt — never at a
+# sub-path, so a GitHub Pages project URL ending in /fresh-track/ will not
+# be found. A custom domain, or a <user>.github.io root site, is required.
+#
+# Publisher: AdMob account pub-2458076513370174
+# f08c47fec0942fa0 is Google's own TAG certification id, identical for every
+# publisher — it is not a secret and not account-specific.
+google.com, pub-2458076513370174, DIRECT, f08c47fec0942fa0
